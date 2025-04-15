@@ -3,6 +3,7 @@ package level03.exercice01.aplication;
 import level03.exercice01.exceptions.UnknownEditorException;
 import level03.exercice01.model.Editor;
 import level03.exercice01.model.News;
+import level03.exercice01.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -97,12 +98,12 @@ public class EditorManager {
 
         System.out.println(System.lineSeparator() + "NEWS LIST..................");
 
-        System.out.println(Utils.formatedToChars("Editor", 16) + " \t " + NewsManager.makeHeadLineNews());
+        System.out.println(Utils.formatToChars("Editor", 16) + " \t " + NewsManager.makeHeadLineNews());
 
         for (Editor editor : editors) {
             if (!editor.getNews().isEmpty()) {
                 for (News news : editor.getNews()) {
-                    System.out.println(Utils.formatedToChars(editor.getName(), 16) + " \t " +
+                    System.out.println(Utils.formatToChars(editor.getName(), 16) + " \t " +
                             NewsManager.makeLineNews(news.listNews()));
                 }
             }
@@ -167,10 +168,10 @@ public class EditorManager {
 
         int i = 0;
 
-        return Utils.formatedToChars(dataLine.get(i++), 16) + " \t " +
-                Utils.formatedToChars(dataLine.get(i++), 15) + " \t " +
-                Utils.formatedToChars(dataLine.get(i++), 10) + " \t " +
-                Utils.formatedToChars(dataLine.get(i++), 10) + " \t " +
-                Utils.formatedToChars(dataLine.get(i), 10);
+        return Utils.formatToChars(dataLine.get(i++), 16) + " \t " +
+                Utils.formatToChars(dataLine.get(i++), 15) + " \t " +
+                Utils.formatToChars(dataLine.get(i++), 10) + " \t " +
+                Utils.formatToChars(dataLine.get(i++), 10) + " \t " +
+                Utils.formatToChars(dataLine.get(i), 10);
     }
 }

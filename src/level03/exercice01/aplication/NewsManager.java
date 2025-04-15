@@ -2,6 +2,7 @@ package level03.exercice01.aplication;
 
 import level03.exercice01.enums.*;
 import level03.exercice01.model.*;
+import level03.exercice01.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -219,13 +220,13 @@ public class NewsManager {
 
             int i = 0;
 
-            return Utils.formatedToChars(dataLine.get(i++), 20) + " \t " +
-                    Utils.formatedToChars(dataLine.get(i++), 10) + " \t " +
-                    Utils.formatedToChars(dataLine.get(i++), 15) + " \t " +
-                    Utils.formatedToChars(dataLine.get(i++), 10) + " \t " +
-                    Utils.formatedToChars(dataLine.get(i++), 15) + " \t " +
-                    Utils.formatedToChars(dataLine.get(i++), 10) + " \t " +
-                    Utils.formatedToChars(dataLine.get(i++), 8) + " \t " +
-                    Utils.formatedToChars(dataLine.get(i), 8);
+            return Utils.formatToChars(dataLine.get(i++), 20) + " \t " +
+                    Utils.formatToChars(dataLine.get(i++), 10) + " \t " +
+                    Utils.formatToChars(dataLine.get(i++), 15) + " \t " +
+                    Utils.formatToChars(dataLine.get(i++), 10) + " \t " +
+                    Utils.formatToChars(dataLine.get(i++), 15) + " \t " +
+                    Utils.formatToChars(dataLine.get(i++), 10) + " \t " +
+                    Utils.formatToChars(dataLine.get(i++), 8) + " \t " +
+                    Utils.formatToChars(dataLine.get(i), 8);
         }
     }

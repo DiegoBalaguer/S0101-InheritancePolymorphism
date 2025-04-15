@@ -4,6 +4,7 @@ import level03.exercice01.enums.MnuOptMain;
 import level03.exercice01.model.Editor;
 import level03.exercice01.test.Test;
 import level03.exercice01.data.TablesPricesPoints;
+import level03.exercice01.utils.Utils;
 
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class MainProcess {
         editorManager = new EditorManager(editors);
         tablesPricesPoints.loadInitValues(editors);
         menu();
+        Utils.closeScanner();
     }
 
     private void menu() {
@@ -32,7 +34,6 @@ public class MainProcess {
                 MnuOptMain idMenu = MnuOptMain.values()[answer - 1];
                 switch (idMenu) {
                     case EXIT -> {
-                        Utils.closeScanner();
                         return;
                     }
                     default -> menuOptionsWithoutEditors(idMenu);
